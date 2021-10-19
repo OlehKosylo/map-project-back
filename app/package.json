@@ -1,0 +1,64 @@
+{
+  "name": "passport-loft",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async-redis": "^1.1.7",
+    "axios": "^0.21.0",
+    "bcrypt": "^5.0.1",
+    "circular-json": "^0.5.9",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.6.0",
+    "express": "^4.16.4",
+    "express-rate-limit": "^5.3.0",
+    "express-session": "^1.17.2",
+    "helmet": "^4.6.0",
+    "joi": "^17.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "md5": "^2.3.0",
+    "node-cron": "^2.0.3",
+    "node-fetch": "^2.6.1",
+    "node-uuid": "^1.4.8",
+    "nodemon": "^2.0.9",
+    "package": "^1.0.1",
+    "pg": "^8.7.1",
+    "sequelize": "^6.6.4",
+    "sequelize-cli": "^6.2.0",
+    "unique-string": "^2.0.0",
+    "uuid": "^8.3.2",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/eslint": "^7.2.13",
+    "@types/joi": "^14.3.4",
+    "@types/sequelize": "^4.28.9",
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "lint-staged": "^10.5.4",
+    "morgan": "^1.10.0"
+  },
+  "lint-staged": {
+    "*.{js, json}": [
+      "eslint",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
