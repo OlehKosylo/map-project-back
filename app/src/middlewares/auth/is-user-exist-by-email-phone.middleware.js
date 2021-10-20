@@ -6,10 +6,10 @@ const { usersService } = require('../../services');
 
 module.exports = async (req, res, next) => {
     try {
-        const { email, phone } = req.body;
+        const { email } = req.body;
 
         const foundUser = await usersService.getUserByParams({
-            [Sequelize.Op.or]: [{ email }, { phone }]
+            [Sequelize.Op.or]: [{ email }]
         });
 
         if (foundUser) {
