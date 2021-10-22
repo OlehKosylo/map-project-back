@@ -11,10 +11,8 @@ module.exports = {
         }
     },
 
-    getUserById: (id, attributes) => UserModel.findOne({
+    getUserById: (id) => UserModel.findOne({
         where: { id },
-        attributes,
-        raw: true
     }),
 
     getUserByParams: (params, attributes) => {

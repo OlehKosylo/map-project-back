@@ -39,6 +39,30 @@ module.exports = {
         }
     },
 
+    getUser: async (req, res, next) => {
+        try {
+            const { user } = req;
+
+            const places = await user.getPlaces();
+
+            res.json({ user, places });
+        } catch (e) {
+            next(e);
+        }
+    },
+
+    createPlacesUser: async (req, res, next) => {
+        try {
+            const { user, body } = req;
+
+            await user.addPlaces(body);
+
+            res.json({ user });
+        } catch (e) {
+            next(e);
+        }
+    },
+
     updateUser: async (req, res, next) => {
         try {
             const { id } = req.user;

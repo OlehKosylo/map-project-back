@@ -1,4 +1,5 @@
 module.exports = {
     authService: require('./auth'),
-    usersService: require('./users')
+    usersService: require('./users'),
+    placeService: require('./place')
 };

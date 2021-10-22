@@ -13,4 +13,7 @@ usersRouter.get('/', usersController.getAllUsers);
 usersRouter.patch('/', usersController.updateUser);
 usersRouter.patch('/password', usersController.updatePassword);
 
+usersRouter.post('/by/jwt', usersController.createPlacesUser);
+usersRouter.get('/by/jwt', usersController.getUser);
+
 module.exports = usersRouter;

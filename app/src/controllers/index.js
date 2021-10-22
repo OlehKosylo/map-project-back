@@ -1,5 +1,6 @@
 module.exports = {
     authController: require('./auth'),
     adminController: require('./admin'),
-    usersController: require('./users')
+    usersController: require('./users'),
+    placesController: require('./place')
 };

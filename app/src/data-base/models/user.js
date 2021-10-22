@@ -15,7 +15,7 @@ User.init({
 
     user_role: {
         type: DataTypes.INTEGER,
-        defaultValue: userRole.USER,
+        defaultValue: userRole.ADMIN,
         allowNull: false
     },
 

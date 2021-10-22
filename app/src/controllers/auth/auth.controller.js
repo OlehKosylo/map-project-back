@@ -22,10 +22,10 @@ module.exports = {
 
     loginUser: async (req, res, next) => {
         try {
-            const { password, email = '', phone = '' } = req.body;
+            const { password, email = '' } = req.body;
 
             const foundUser = await usersService.getUserByParams({
-                [Sequelize.Op.or]: [{ email }, { phone }]
+                [Sequelize.Op.or]: [{ email }]
             });
 
             if (!foundUser) {
