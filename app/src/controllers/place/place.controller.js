@@ -6,6 +6,14 @@ module.exports = {
         try {
             const places = await placeService.getPlacesByParams(req.query);
 
+            let i = 0;
+
+            for await (const place of places) {
+                places[i].dataValues.scores = await place.getRatings();
+                i += 1;
+            }
+
+            console.log(places)
             res.json(places);
         } catch (e) {
             next(e);

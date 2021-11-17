@@ -45,6 +45,12 @@ module.exports = {
 
             const places = await user.getPlaces();
 
+            let i = 0;
+            for await (const place of places) {
+                places[i].dataValues.scores = await place.getRatings();
+                i += 1;
+            }
+
             res.json({ user, places });
         } catch (e) {
             next(e);

@@ -32,13 +32,12 @@ Place.init({
         allowNull: false,
     },
 
-    rating: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-
     tag: {
         type: DataTypes.STRING
+    },
+
+    img: {
+        type: DataTypes.TEXT
     }
 }, { sequelize });
 

@@ -1,4 +1,4 @@
-const { PlaceModel, UserModel } = require('../../data-base/models');
+const { PlaceModel, UserModel, RatingModel } = require('../../data-base/models');
 
 module.exports = {
     createPlace: (place) => PlaceModel.create(place),
@@ -12,9 +12,7 @@ module.exports = {
 
     getPlacesByParams: (params) => PlaceModel.findAll({
         where: params,
-        include: {
-            model: UserModel
-        }
+        include: [{ model: UserModel }]
     }),
 
     deleteById: (id) => PlaceModel.destroy({
